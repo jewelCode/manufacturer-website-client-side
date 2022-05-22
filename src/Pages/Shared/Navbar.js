@@ -1,6 +1,14 @@
+import { signOut } from 'firebase/auth';
 import React from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import { Link } from 'react-router-dom';
+import auth from '../../firebase.init';
 
 const Navbar = () => {
+    const [user] = useAuthState(auth);
+    const logout = () => {
+        signOut(auth);
+      };
     return (
         <div class="navbar bg-base-100">
             <div class="navbar-start">
@@ -15,10 +23,6 @@ const Navbar = () => {
                         Parent
                         <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z"/></svg>
                     </a>
-                    <ul class="p-2">
-                        <li><a>Submenu 1</a></li>
-                        <li><a>Submenu 2</a></li>
-                    </ul>
                     </li>
                     <li><a>Item 3</a></li>
                 </ul>
@@ -27,18 +31,13 @@ const Navbar = () => {
             </div>
             <div class="navbar-center hidden lg:flex">
                 <ul class="menu menu-horizontal p-0">
-                <li><a>Item 1</a></li>
-                <li tabindex="0">
-                    <a>
-                    Parent
-                    <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"/></svg>
-                    </a>
-                    <ul class="p-2">
-                    <li><a>Submenu 1</a></li>
-                    <li><a>Submenu 2</a></li>
-                    </ul>
-                </li>
-                <li><a>Item 3</a></li>
+                    <li><Link to="/">Home</Link></li>
+                    <li><Link to="/about">About</Link></li>
+                    <li><Link to="/blog">Blog</Link></li>
+                    <li><Link to="/myportfolio">My Portfolio</Link></li>
+                    {user && <li><Link to="/dashboard">Dashboard</Link></li>}
+                    <li>{user ? <button class="btn btn-ghost" onClick={logout}>Log Out</button> : <Link to="/login">Login</Link>}</li>
+                    
                 </ul>
             </div>
             <div class="navbar-end">
