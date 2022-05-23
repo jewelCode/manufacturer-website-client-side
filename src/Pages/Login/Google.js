@@ -23,8 +23,8 @@ const Google = () => {
         return <p>Loading...</p>;
       }
     return (
-        <div>
-            <button onClick={() => signInWithGoogle()}>Sign In</button>
+        <div class="form-control mt-6">
+            <button class="btn btn-primary" onClick={() => signInWithGoogle()}>Google Sign In</button>
         </div>
     );
 };
