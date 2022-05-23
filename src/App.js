@@ -3,6 +3,9 @@ import './App.css';
 import About from './Pages/About/About';
 import Blog from './Pages/Blogs/Blog';
 import Dashboard from './Pages/Dashboard/Dashboard';
+import MyOrders from './Pages/Dashboard/MyOrders';
+import MyProfile from './Pages/Dashboard/MyProfile';
+import MyReview from './Pages/Dashboard/MyReview';
 import Home from './Pages/Home/Home';
 import Login from './Pages/Login/Login';
 import RequireAuth from './Pages/Login/RequireAuth';
@@ -14,7 +17,7 @@ import Navbar from './Pages/Shared/Navbar';
 
 function App() {
   return (
-    <div className="App">
+    <div>
         <Navbar></Navbar>
         <Routes>
               <Route path="/" element={<Home></Home>}></Route>
@@ -23,9 +26,15 @@ function App() {
               <Route path="about" element={<About></About>}></Route>
               <Route path="blog" element={<Blog></Blog>}></Route>
               <Route path="myportfolio" element={<MyPortfolio></MyPortfolio>}></Route>
-              <Route path="dashboard" element={<RequireAuth>
-              <Dashboard/>
-            </RequireAuth>}></Route>
+              <Route path="dashboard" element={
+                <RequireAuth>
+                    <Dashboard/>
+                </RequireAuth>}>
+                <Route index element={<MyProfile></MyProfile>}></Route>
+                <Route path="myreview"element={<MyReview></MyReview>}></Route>
+                <Route path="myorders"element={<MyOrders></MyOrders>}></Route>
+                
+            </Route>
               <Route path="purchase" element={<RequireAuth>
                       <Purchase></Purchase>
               </RequireAuth>}></Route>

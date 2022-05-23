@@ -13,4 +13,6 @@ You have to write project details in this section
 * Firebase for Authenctication and Deploy
 * React Firebase Hooks
 * React Firebase Hooks
+* Tailwind CSS
+* Daisy UI
 
