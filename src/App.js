@@ -2,10 +2,10 @@ import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import About from './Pages/About/About';
 import Blog from './Pages/Blogs/Blog';
+import AddAReview from './Pages/Dashboard/AddAReview';
 import Dashboard from './Pages/Dashboard/Dashboard';
 import MyOrders from './Pages/Dashboard/MyOrders';
 import MyProfile from './Pages/Dashboard/MyProfile';
-import MyReview from './Pages/Dashboard/MyReview';
 import Home from './Pages/Home/Home';
 import Login from './Pages/Login/Login';
 import RequireAuth from './Pages/Login/RequireAuth';
@@ -31,7 +31,7 @@ function App() {
                     <Dashboard/>
                 </RequireAuth>}>
                 <Route index element={<MyProfile></MyProfile>}></Route>
-                <Route path="myreview"element={<MyReview></MyReview>}></Route>
+                <Route path="addareview"element={<AddAReview></AddAReview>}></Route>
                 <Route path="myorders"element={<MyOrders></MyOrders>}></Route>
                 
             </Route>

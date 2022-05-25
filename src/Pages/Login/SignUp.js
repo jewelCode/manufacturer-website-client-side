@@ -2,6 +2,7 @@ import React from 'react';
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { useForm } from "react-hook-form";
 import auth from '../../firebase.init';
+import Google from './Google';
 
 const SignUp = () => {
     const { register, formState: { errors }, handleSubmit } = useForm();
@@ -50,6 +51,7 @@ const SignUp = () => {
                         <input type="submit" class="btn btn-primary" value="sign Up"/>
                         </div>
                     </form>
+                   
                     </div>
                     </div>
                 </div>

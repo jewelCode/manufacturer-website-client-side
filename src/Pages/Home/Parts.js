@@ -7,7 +7,6 @@ const Parts = () => {
         fetch('http://localhost:5000/product')
         .then(res => res.json())
         .then(data => setTools(data))
-
     }, [])
     return (
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 grid-cols-1">
