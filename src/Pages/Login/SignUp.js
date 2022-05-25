@@ -1,6 +1,20 @@
 import React from 'react';
+import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useForm } from "react-hook-form";
+import auth from '../../firebase.init';
 
 const SignUp = () => {
+    const { register, formState: { errors }, handleSubmit } = useForm();
+    const [
+        createUserWithEmailAndPassword,
+        user,
+        loading,
+        error,
+      ] = useCreateUserWithEmailAndPassword(auth);
+    const onSubmit = data => {
+    console.log(data)
+    createUserWithEmailAndPassword(data.email, data.password)
+    };
     return (
         <div>
             <div class="hero min-h-screen bg-base-200">
@@ -11,35 +25,35 @@ const SignUp = () => {
                     </div>
                     <div class="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
                     <div class="card-body">
+                    <form onSubmit={handleSubmit(onSubmit)}>
                         <div class="form-control">
                             <label class="label">
                                 <span class="label-text">Name</span>
                             </label>
-                            <input type="text" placeholder="email" class="input input-bordered" />
+                            <input {...register("name", { required: true })}  type="text" placeholder="name" class="input input-bordered" />
+                            {errors.name?.type === 'required' && "name is required"}
                         </div>
                         <div class="form-control">
                             <label class="label">
                                 <span class="label-text">Email</span>
                             </label>
-                            <input type="text" placeholder="email" class="input input-bordered" />
+                            <input {...register("email", { required: true })}  type="text" placeholder="email" class="input input-bordered" />
+                            {errors.email?.type === 'required' && "email is required"}
                         </div>
                         <div class="form-control">
                         <label class="label">
                             <span class="label-text">Password</span>
                         </label>
-                        <input type="text" placeholder="password" class="input input-bordered" />
-                        <label class="label">
-                            <a href="#" class="label-text-alt link link-hover">Forgot password?</a>
-                        </label>
+                        <input {...register("password", { required: true })} type="password" placeholder="password" class="input input-bordered" />
                         </div>
                         <div class="form-control mt-6">
-                        <button class="btn btn-primary">Sign Up</button>
+                        <input type="submit" class="btn btn-primary" value="sign Up"/>
                         </div>
+                    </form>
                     </div>
                     </div>
                 </div>
-                </div>
-            
+               </div>
         </div>
     );
 };

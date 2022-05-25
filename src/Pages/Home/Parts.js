@@ -1,18 +1,19 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import PartsDetails from './PartsDetails';
 
 const Parts = () => {
+    const[tools, setTools] = useState([]);
+    useEffect(() =>{
+        fetch('http://localhost:5000/product')
+        .then(res => res.json())
+        .then(data => setTools(data))
+
+    }, [])
     return (
-        <div class="card w-96 bg-base-100 shadow-xl">
-            <figure class="px-10 pt-10">
-                <img src="https://api.lorem.space/image/shoes?w=400&h=225" alt="Shoes" class="rounded-xl" />
-            </figure>
-            <div class="card-body items-center text-center">
-                <h2 class="card-title">Shoes!</h2>
-                <p>If a dog chews shoes whose shoes does he choose?</p>
-                <div class="card-actions">
-                <button class="btn btn-primary">Buy Now</button>
-                </div>
-            </div>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 grid-cols-1">
+            {
+                tools.map(tool => <PartsDetails tool={tool} key={tool._id}></PartsDetails>)
+            }
         </div>
     );
 };
