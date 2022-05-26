@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 
 const PartsDetails = ({ tool }) => {
     console.log(tool)
-    const { _id, name, description, price, img } = tool;
+    const { _id, name, description, price, img, quantity} = tool;
     const navigate = useNavigate()
 
     const handlePartsDetail = id =>{
@@ -19,8 +19,10 @@ const PartsDetails = ({ tool }) => {
                     <h2 class="card-title">{name}</h2>
                     <p>{description}</p>
                     <p>Price: ${price}</p>
+                    <p>Quantity: {quantity}</p>
                     <div class="card-actions">
-                        <button class="btn btn-primary" onClick={()=> handlePartsDetail(_id)}>Buy Now</button>
+                        <button onClick={()=> handlePartsDetail(_id)}  class="btn btn-primary" >Buy Now</button>
+                        {/* <label onClick={()=> setOrders(tool)} for="order-modal" class="btn modal-button">Buy Now</label> */}
                     </div>
                 </div>
             </div>
