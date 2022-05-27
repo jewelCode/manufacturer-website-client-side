@@ -3,7 +3,9 @@ import './App.css';
 import About from './Pages/About/About';
 import Blog from './Pages/Blogs/Blog';
 import AddAReview from './Pages/Dashboard/AddAReview';
+import AddProduct from './Pages/Dashboard/AddProduct';
 import Dashboard from './Pages/Dashboard/Dashboard';
+import ManageOrders from './Pages/Dashboard/ManageOrders';
 import MyOrders from './Pages/Dashboard/MyOrders';
 import MyProfile from './Pages/Dashboard/MyProfile';
 import Users from './Pages/Dashboard/Users';
@@ -35,6 +37,8 @@ function App() {
                 <Route path="addareview"element={<AddAReview></AddAReview>}></Route>
                 <Route path="myorders"element={<MyOrders></MyOrders>}></Route>
                 <Route path="users"element={<Users></Users>}></Route>
+                <Route path="addproduct"element={<AddProduct></AddProduct>}></Route>
+                <Route path="manageorders"element={<ManageOrders></ManageOrders>}></Route>
             </Route>
               <Route path="purchase/:purchaseId" element={<RequireAuth>
                       <Purchase></Purchase>
