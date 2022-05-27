@@ -6,6 +6,7 @@ import AddAReview from './Pages/Dashboard/AddAReview';
 import Dashboard from './Pages/Dashboard/Dashboard';
 import MyOrders from './Pages/Dashboard/MyOrders';
 import MyProfile from './Pages/Dashboard/MyProfile';
+import Users from './Pages/Dashboard/Users';
 import Home from './Pages/Home/Home';
 import Login from './Pages/Login/Login';
 import RequireAuth from './Pages/Login/RequireAuth';
@@ -33,7 +34,7 @@ function App() {
                 <Route index element={<MyProfile></MyProfile>}></Route>
                 <Route path="addareview"element={<AddAReview></AddAReview>}></Route>
                 <Route path="myorders"element={<MyOrders></MyOrders>}></Route>
-                
+                <Route path="users"element={<Users></Users>}></Route>
             </Route>
               <Route path="purchase/:purchaseId" element={<RequireAuth>
                       <Purchase></Purchase>
