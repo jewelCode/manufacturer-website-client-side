@@ -1,26 +1,27 @@
 [
     {
         "id": 1,
-        "name": "Healthy Meal Plan",
-        "description": "How We dream about our future",
-        "price": 23.99,
-        "quantity": 100,
-        "img": "https://i.ibb.co/8b9jwYv/dinner1.png"
+        "name": "Square Sash Paint Brush",
+        "description": "It contains black and brown PBT and PET blended tapered synthetic filament.",
+        "minorderquantity": 100,
+        "availablequantity": 1000,
+        "price": 50,
+        "img": "https://cdn.globalso.com/esteebrush/Main-graph10-300x300.jpg"
     },
     {
-        "id": 2,
-        "name": "Fried Chicken Bento",
-        "description": "How We dream about our future",
-        "price": 9.99,
-        "quantity": 200,
-        "img": "https://i.ibb.co/wMSwtB5/dinner2.png"
+        "name": "Wall Paint Roller With Plastic Handle",
+        "description": "This set is suitable for; decorating, doors, folding, peeling & more, and is ready for easy access to difficult areas, and with the purchase of this set you can call your job done!",
+        "minorderquantity": 10,
+        "availablequantity": 100,
+        "price": 10,
+        "img": "https://cdn.globalso.com/esteebrush/IMG_77545-300x300.jpg"
     },
     {
-        "id": 3,
         "name": "Tarragon Rubbed Salmon",
-        "description": "How We dream about our future",
-        "price": 6.99,
-        "quantity": 300,
-        "img": "https://i.ibb.co/CKBMb88/dinner3.png"
+        "description": "corner trim band and decorative brush, Technex nylon and Ole polyester blend, long fluted natural finishing wood handle. Add extra shine to your product",
+        "minorderquantity": 10,
+        "availablequantity": 100,
+        "price": 15,
+        "img": "https://cdn.globalso.com/esteebrush/1-300x300.jpg"
     }
 ]

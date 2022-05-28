@@ -44,13 +44,13 @@ const AddProduct = () => {
                     <label class="label">
                         <span class="label-text">Qunatity:</span>
                     </label>
-                    <input {...register("quantity")} type="number" placeholder="Enter Your Ratings By 1 to 5" class="input input-bordered w-full max-w-xs" />
+                    <input {...register("quantity")} type="number" placeholder="Enter Your Product Quantity" class="input input-bordered w-full max-w-xs" />
                 </div>
                 <div class="form-control w-full max-w-xs">
                     <label class="label">
                         <span class="label-text">Image Link:</span>
                     </label>
-                    <input {...register("img")} type="text" placeholder="Enter Your Ratings By 1 to 5" class="input input-bordered w-full max-w-xs" />
+                    <input {...register("img")} type="text" placeholder="Enter Your Image Link Here" class="input input-bordered w-full max-w-xs" />
                 </div>
                 <br />
                 <button type="submit" class="btn btn-outline btn-primary">Add Your Product</button>

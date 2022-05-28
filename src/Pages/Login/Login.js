@@ -12,20 +12,20 @@ const Login = () => {
         user,
         loading,
         error,
-      ] = useSignInWithEmailAndPassword(auth);
+    ] = useSignInWithEmailAndPassword(auth);
     let signInError;
 
     const navigate = useNavigate();
     const location = useLocation();
 
-    if(loading){
+    if (loading) {
         return <p>Loading...</p>
     }
     let from = location.state?.from?.pathname || "/";
     if (user) {
-            navigate(from, { replace: true });
-     }
-    if(error){
+        navigate(from, { replace: true });
+    }
+    if (error) {
         signInError = <p>{error?.messege}</p>
     }
     const onSubmit = data => {
@@ -38,7 +38,7 @@ const Login = () => {
                 <div class="hero-content flex-col lg:flex-row-reverse">
                     <div class="text-center lg:text-left">
                         <h1 class="text-5xl font-bold">Login now!</h1>
-                        <p class="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+                        <p class="py-6">Please Provide Necessary Information to Login</p>
                     </div>
                     <div class="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
                         <div class="card-body">
@@ -62,6 +62,7 @@ const Login = () => {
                                         <input type="submit" class="btn btn-primary" value="Login" />
                                     </div>
                                 </form>
+                                <p className="text-light">Don't Have an Account? <Link to="/signup" className="text-light">Please Register</Link></p>
                                 <Google></Google>
                             </div>
                         </div>

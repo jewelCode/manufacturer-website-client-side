@@ -2,11 +2,12 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
 const PartsDetails = ({ tool }) => {
-  
-    const { _id, name, description, price, img, quantity} = tool;
+
+    const { _id, name, description, availablequantity,
+        price, img, minorderquantity } = tool;
     const navigate = useNavigate()
 
-    const handlePartsDetail = id =>{
+    const handlePartsDetail = id => {
         navigate(`/purchase/${id}`);
     }
     return (
@@ -16,12 +17,13 @@ const PartsDetails = ({ tool }) => {
                     <img src={img} alt="Shoes" class="rounded-xl" />
                 </figure>
                 <div class="card-body items-center text-center">
-                    <h2 class="card-title">{name}</h2>
-                    <p>{description}</p>
+                    <h2 class="card-title">Name: {name}</h2>
+                    <p>Description: {description}</p>
                     <p>Price: ${price}</p>
-                    <p>Quantity: {quantity}</p>
+                    <p>Available Quantity: {availablequantity}</p>
+                    <p>Minorder Quantity: {minorderquantity}</p>
                     <div class="card-actions">
-                        <button onClick={()=> handlePartsDetail(_id)}  class="btn btn-primary" >Buy Now</button>
+                        <button onClick={() => handlePartsDetail(_id)} class="btn btn-primary" >Buy Now</button>
                         {/* <label onClick={()=> setOrders(tool)} for="order-modal" class="btn modal-button">Buy Now</label> */}
                     </div>
                 </div>
