@@ -1,10 +1,10 @@
 # Welcome to Manufacturer Website Client Side
 
-Live Website Link: [Create React App](https://github.com/facebook/create-react-app).
+Live Website Link: [Brush Nest](https://manufacturer-website-4a65e.web.app/).
 
 ## Project Details
 
-You have to write project details in this section
+In this apps user can order tools and manage the tool and will get information about remaining quantity.
 
 ## Technology I have used for this website
 

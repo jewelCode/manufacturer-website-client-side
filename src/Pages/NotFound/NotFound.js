@@ -1,11 +1,11 @@
 import React from 'react';
+import error from '.././resources/error.jpg'
 
 const NotFound = () => {
     return (
-        <div>
-            <h2>Oops! This Page is Not Found.</h2>
-            <p><small>The requested page dose not exist.</small></p>
-        </div>
+        <div className="container w-50 mt-5">
+        <img src={error} className="img-fluid" alt="" />
+    </div>
     );
 };
 

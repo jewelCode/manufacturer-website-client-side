@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 const MyPortfolio = () => {
 
     return (
@@ -21,6 +22,13 @@ const MyPortfolio = () => {
                         <li>Node</li>
                         <li>Mongodb</li>
                     </ul>
+                    <h1 class="text-5xl font-bold">My Projects</h1>
+                    <br />
+                    <a href="https://warehouse-management-cbc94.web.app/">Warehouse Management</a>
+                    <br />
+                    <a href="https://lawyer-service-d75bc.web.app/">Lawyer Service</a>
+                    <br />
+                    <a href="https://xtreame-moto-bike.netlify.app/">Xtream Moto Bike</a>
                 </div>
             </div>
         </div>

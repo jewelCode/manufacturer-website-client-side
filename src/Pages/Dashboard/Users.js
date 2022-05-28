@@ -15,15 +15,15 @@ const Users = () => {
                 <table class="table w-full">
                     <thead>
                         <tr>
-                            <th></th>
+                            <th>SL No</th>
                             <th>Name</th>
-                            <th>Job</th>
-                            <th>Favorite Color</th>
+                            <th>Status</th>
+                            <th>Remove User</th>
                         </tr>
                     </thead>
                     <tbody>
                         {
-                            users.map(user => <UserDetail user={user} key={user._id} refetch={refetch}></UserDetail>)
+                            users.map((user, index) => <UserDetail user={user} index={index} key={user._id} refetch={refetch}></UserDetail>)
                         }
 
                     </tbody>
