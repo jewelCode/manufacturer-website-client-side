@@ -6,9 +6,9 @@ import PartsDetails from './PartsDetails';
 const Parts = () => {
     const [tools, setTools] = useState([]);
     const [orders, setOrders] = useState(null);
-   
+
     useEffect(() => {
-        fetch('http://localhost:5000/product')
+        fetch('https://fast-shelf-13273.herokuapp.com/product')
             .then(res => res.json())
             .then(data => setTools(data))
     }, [])

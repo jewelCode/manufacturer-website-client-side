@@ -7,7 +7,7 @@ const MyOrders = () => {
     const [user] = useAuthState(auth);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/order?useremail=${user.email}`)
+        fetch(`https://fast-shelf-13273.herokuapp.com/order?useremail=${user.email}`)
             .then(res => res.json())
             .then(data => setMyOrders(data))
     }, [user])
@@ -15,7 +15,7 @@ const MyOrders = () => {
     const handleDelete = id => {
         const proceedDelete = window.confirm("Are you sure you want to delete your product?");
         if (proceedDelete) {
-            const url = `http://localhost:5000/order/${id}`;
+            const url = `https://fast-shelf-13273.herokuapp.com/order/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })

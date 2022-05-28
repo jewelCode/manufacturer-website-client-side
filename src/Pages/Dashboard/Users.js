@@ -4,7 +4,7 @@ import UserDetail from './UserDetail';
 
 
 const Users = () => {
-    const { data: users, isLoading, refetch } = useQuery('users', () => fetch('http://localhost:5000/user').then(res => res.json()));
+    const { data: users, isLoading, refetch } = useQuery('users', () => fetch('https://fast-shelf-13273.herokuapp.com/user').then(res => res.json()));
     if (isLoading) {
         return <p>Loading...</p>;
     }

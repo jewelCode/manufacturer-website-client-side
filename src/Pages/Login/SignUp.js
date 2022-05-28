@@ -54,7 +54,7 @@ const SignUp = () => {
                                 </div>
                                 <div class="form-control">
                                     <label class="label">
-                                        <span class="label-text">Password</span>
+                                        <span class="label-text">Passcode</span>
                                     </label>
                                     <input {...register("password", { required: true })} type="password" placeholder="password" class="input input-bordered" />
                                 </div>

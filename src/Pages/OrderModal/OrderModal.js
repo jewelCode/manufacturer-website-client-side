@@ -19,7 +19,7 @@
 //             username: user.displayName,
 //             phone: event.target.phone.value
 //         }
-//         fetch('http://localhost:5000/order', {
+//         fetch('https://fast-shelf-13273.herokuapp.com/order', {
 //             method: 'POST',
 //             headers: {
 //                 'content-type': 'application/json'
